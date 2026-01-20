@@ -1,50 +1,3 @@
-import { TrendingUp, Users, Gamepad2, Trophy, Clock, CreditCard } from "lucide-react"
-
-const stats = [
-  {
-    icon: Users,
-    value: "500 000+",
-    label: "Aktywnych Graczy",
-    description: "Zaufało VOX Casino",
-    color: "primary"
-  },
-  {
-    icon: Gamepad2,
-    value: "2 000+",
-    label: "Gier Casino",
-    description: "Od najlepszych dostawców",
-    color: "accent"
-  },
-  {
-    icon: Trophy,
-    value: "€50M+",
-    label: "Wypłaconych Wygranych",
-    description: "Rocznie",
-    color: "chart-3"
-  },
-  {
-    icon: Clock,
-    value: "< 24h",
-    label: "Czas Wypłaty",
-    description: "Na e-portfele",
-    color: "chart-4"
-  },
-  {
-    icon: TrendingUp,
-    value: "97.5%",
-    label: "Średnie RTP",
-    description: "Wskaźnik zwrotu",
-    color: "primary"
-  },
-  {
-    icon: CreditCard,
-    value: "10+",
-    label: "Metod Płatności",
-    description: "Dla polskich graczy",
-    color: "accent"
-  }
-]
-
 const gameStats = [
   { category: "Automaty Online", count: "1500+", percentage: 75 },
   { category: "Kasyno na Żywo", count: "200+", percentage: 10 },
@@ -63,38 +16,6 @@ export function Statistics() {
             VOX Casino{" "}
             <span className="text-gradient">w liczbach</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Poznaj statystyki, które pokazują, dlaczego VOX Casino jest jednym z 
-            najpopularniejszych kasyn online dla polskich graczy.
-          </p>
-        </div>
-
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
-          {stats.map((stat) => {
-            const Icon = stat.icon
-            const colorClasses = {
-              primary: "text-primary bg-primary/10",
-              accent: "text-accent bg-accent/10",
-              "chart-3": "text-chart-3 bg-chart-3/10",
-              "chart-4": "text-chart-4 bg-chart-4/10"
-            }
-            const iconColors = colorClasses[stat.color as keyof typeof colorClasses]
-            
-            return (
-              <div 
-                key={stat.label}
-                className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 text-center hover:border-primary/50 transition-colors"
-              >
-                <div className={`w-12 h-12 mx-auto rounded-xl flex items-center justify-center mb-3 ${iconColors}`}>
-                  <Icon className="w-6 h-6" />
-                </div>
-                <p className="text-2xl md:text-3xl font-bold text-foreground">{stat.value}</p>
-                <p className="text-sm font-medium text-foreground">{stat.label}</p>
-                <p className="text-xs text-muted-foreground">{stat.description}</p>
-              </div>
-            )
-          })}
         </div>
 
         {/* Game Distribution */}

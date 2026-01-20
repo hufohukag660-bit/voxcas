@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
-import { Star, Gift, Users, Zap } from "lucide-react"
+import { Gift } from "lucide-react"
+import Link from "next/link"
 
 export function Hero() {
   return (
@@ -16,47 +17,15 @@ export function Hero() {
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-full px-4 py-2 mb-6">
-              <Star className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Oficjalne Kasyno Online 2026</span>
-            </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-4 sm:mb-6 text-balance">
-              VOX Casino Polska:{" "}
+              VOX Casino Polska 2026:{" "}
               <span className="text-gradient">Oficjalna Strona</span>
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0">
               Sprawdź najnowsze promocje i bonusy w VOX Casino! Co tydzień wprowadzamy nowe automaty i wyjątkowe wydarzenia, aby każda sesja gry była jeszcze bardziej ekscytująca.
             </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-8 sm:mb-10">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 glow-primary text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 w-full sm:w-auto">
-                <Gift className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                Zagraj Teraz
-              </Button>
-              <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-secondary text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 bg-transparent w-full sm:w-auto">
-                Dowiedz się więcej
-              </Button>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-8">
-              <div className="text-center lg:text-left">
-                <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">2000+</p>
-                <p className="text-xs sm:text-sm text-muted-foreground">Gier Casino</p>
-              </div>
-              <div className="text-center lg:text-left">
-                <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent">3000€</p>
-                <p className="text-xs sm:text-sm text-muted-foreground">Bonus Powitalny</p>
-              </div>
-              <div className="text-center lg:text-left">
-                <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-chart-3">500</p>
-                <p className="text-xs sm:text-sm text-muted-foreground">Darmowych Spinów</p>
-              </div>
-            </div>
           </div>
 
           {/* Hero Card */}
@@ -74,32 +43,12 @@ export function Hero() {
                 <p className="text-lg sm:text-xl text-accent font-semibold">+ 500 Darmowych Spinów</p>
               </div>
 
-              {/* Features */}
-              <div className="space-y-3 sm:space-y-4">
-                <div className="flex items-center gap-3 sm:gap-4 p-2.5 sm:p-3 bg-secondary/50 rounded-lg">
-                  <div className="w-9 h-9 sm:w-10 sm:h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
-                    <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                  </div>
-                  <div className="min-w-0">
-                    <p className="font-medium text-foreground text-sm sm:text-base truncate">Natychmiastowe Depozyty</p>
-                    <p className="text-xs sm:text-sm text-muted-foreground truncate">BLIK, Przelewy24, Karty</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3 sm:gap-4 p-2.5 sm:p-3 bg-secondary/50 rounded-lg">
-                  <div className="w-9 h-9 sm:w-10 sm:h-10 bg-accent/10 rounded-lg flex items-center justify-center shrink-0">
-                    <Users className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
-                  </div>
-                  <div className="min-w-0">
-                    <p className="font-medium text-foreground text-sm sm:text-base truncate">Kasyno na Żywo</p>
-                    <p className="text-xs sm:text-sm text-muted-foreground truncate">Profesjonalni krupierzy 24/7</p>
-                  </div>
-                </div>
-              </div>
-
               {/* CTA */}
-              <Button className="w-full mt-4 sm:mt-6 bg-primary text-primary-foreground hover:bg-primary/90 glow-primary py-5 sm:py-6 text-base sm:text-lg">
-                Odbierz Bonus Teraz
-              </Button>
+              <Link href="/play" passHref>
+                <Button className="w-full mt-4 sm:mt-6 bg-primary text-primary-foreground hover:bg-primary/90 glow-primary py-5 sm:py-6 text-base sm:text-lg">
+                  Odbierz Bonus Teraz
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

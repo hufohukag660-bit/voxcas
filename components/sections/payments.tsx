@@ -135,40 +135,6 @@ export function Payments() {
             })}
           </div>
         </div>
-
-        {/* Info Cards */}
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-card/30 border border-border rounded-xl p-6">
-            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-              <CreditCard className="w-6 h-6 text-primary" />
-            </div>
-            <h3 className="font-semibold text-foreground mb-2">Waluta PLN</h3>
-            <p className="text-sm text-muted-foreground">
-              Gracze z Polski mogą wygodnie przeprowadzać transakcje w PLN, 
-              unikając opłat za przewalutowanie. Akceptujemy również EUR.
-            </p>
-          </div>
-          <div className="bg-card/30 border border-border rounded-xl p-6">
-            <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
-              <Shield className="w-6 h-6 text-accent" />
-            </div>
-            <h3 className="font-semibold text-foreground mb-2">Bezpieczne Transakcje</h3>
-            <p className="text-sm text-muted-foreground">
-              Wszystkie płatności są chronione 128-bitowym szyfrowaniem SSL. 
-              Ten sam standard, który stosują banki.
-            </p>
-          </div>
-          <div className="bg-card/30 border border-border rounded-xl p-6">
-            <div className="w-12 h-12 bg-chart-3/10 rounded-xl flex items-center justify-center mb-4">
-              <Wallet className="w-6 h-6 text-chart-3" />
-            </div>
-            <h3 className="font-semibold text-foreground mb-2">Szybkie E-portfele</h3>
-            <p className="text-sm text-muted-foreground">
-              Wypłaty na e-portfele (Skrill/Neteller) są przetwarzane 
-              w ciągu 0-24 godzin. Najszybsza opcja wypłaty.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   )

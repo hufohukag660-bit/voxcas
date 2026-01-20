@@ -22,9 +22,11 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="relative">
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-lg flex items-center justify-center glow-primary">
-                <span className="text-primary-foreground font-bold text-lg md:text-xl">V</span>
-              </div>
+              <img 
+                src="/vox2.png"
+                alt="VOX Casino Logo"
+                className="w-10 h-10 md:w-12 md:h-12 object-contain"
+              />
             </div>
             <div className="flex flex-col">
               <span className="text-xl md:text-2xl font-bold text-foreground">VOX</span>
@@ -51,13 +53,17 @@ export function Header() {
               <Shield className="w-4 h-4 text-accent" />
               <span>Licencja Curacao</span>
             </div>
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent">
-              Zaloguj się
-            </Button>
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 glow-primary">
-              <Star className="w-4 h-4 mr-2" />
-              Zarejestruj się
-            </Button>
+            <Link href="/play" passHref>
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent">
+                Zaloguj się
+              </Button>
+            </Link>
+            <Link href="/play" passHref>
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 glow-primary">
+                <Star className="w-4 h-4 mr-2" />
+                Zarejestruj się
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -85,12 +91,16 @@ export function Header() {
                 </a>
               ))}
               <div className="flex flex-col gap-3 pt-4 border-t border-border">
-                <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent">
-                  Zaloguj się
-                </Button>
-                <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                  Zarejestruj się
-                </Button>
+                <Link href="/play" passHref onClick={() => setIsMenuOpen(false)}>
+                  <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent">
+                    Zaloguj się
+                  </Button>
+                </Link>
+                <Link href="/play" passHref onClick={() => setIsMenuOpen(false)}>
+                  <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+                    Zarejestruj się
+                  </Button>
+                </Link>
               </div>
             </nav>
           </div>

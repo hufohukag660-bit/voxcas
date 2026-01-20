@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { CheckCircle2, Sparkles, Gift, Shield, Smartphone, Zap } from "lucide-react"
+import Link from "next/link"
 
 const showcaseItems = [
   {
@@ -15,7 +16,7 @@ const showcaseItems = [
       "Gry stołowe: ruletka, blackjack, poker",
       "Jackpoty progresywne z milionowymi pulami"
     ],
-    image: "/images/casino-games.jpg",
+    image: "/images/slots.jpeg",
     icon: Sparkles,
     color: "primary"
   },
@@ -29,7 +30,7 @@ const showcaseItems = [
       "Cotygodniowe promocje i reload bonusy",
       "Ekskluzywny program VIP z cashbackiem"
     ],
-    image: "/images/casino-bonus.jpg",
+    image: "/images/bonus.webp",
     icon: Gift,
     color: "accent"
   },
@@ -43,7 +44,7 @@ const showcaseItems = [
       "Certyfikowane gry z generatorem RNG",
       "Zgodność z RODO i ochrona danych"
     ],
-    image: "/images/casino-security.jpg",
+    image: "/images/curacao.jpg",
     icon: Shield,
     color: "chart-3"
   },
@@ -57,7 +58,7 @@ const showcaseItems = [
       "Płynna rozgrywka w jakości HD",
       "Szybkie depozyty przez BLIK mobilny"
     ],
-    image: "/images/casino-mobile.jpg",
+    image: "/images/mobbile.png",
     icon: Smartphone,
     color: "chart-4"
   },
@@ -71,7 +72,7 @@ const showcaseItems = [
       "Transakcje w PLN bez przewalutowania",
       "Zerowe opłaty za depozyty"
     ],
-    image: "/images/casino-payments.jpg",
+    image: "/images/fast.jfif",
     icon: Zap,
     color: "primary"
   }
@@ -149,14 +150,6 @@ export function FeaturesShowcase() {
                     />
                     {/* Overlay gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-                    
-                    {/* Badge on image */}
-                    <div className={`absolute bottom-3 left-3 sm:bottom-4 sm:left-4 ${colors.iconBg} backdrop-blur-sm rounded-lg px-3 py-1.5 sm:px-4 sm:py-2 border ${colors.borderColor}`}>
-                      <div className="flex items-center gap-2">
-                        <Icon className={`w-4 h-4 sm:w-5 sm:h-5 ${colors.iconColor}`} />
-                        <span className={`text-xs sm:text-sm font-semibold ${colors.iconColor}`}>{item.subtitle}</span>
-                      </div>
-                    </div>
                   </div>
                 </div>
 
@@ -188,12 +181,14 @@ export function FeaturesShowcase() {
                     ))}
                   </ul>
                   
-                  <Button 
-                    size="lg" 
-                    className={`bg-primary text-primary-foreground hover:bg-primary/90 ${colors.glowClass} w-full sm:w-auto text-sm sm:text-base`}
-                  >
-                    Dowiedz się więcej
-                  </Button>
+                  <Link href="/play" passHref>
+  <Button 
+    size="lg" 
+    className={`bg-primary text-primary-foreground hover:bg-primary/90 ${colors.glowClass} w-full sm:w-auto text-sm sm:text-base`}
+  >
+    Dowiedz się więcej
+  </Button>
+</Link>
                 </div>
               </div>
             )

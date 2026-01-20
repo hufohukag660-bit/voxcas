@@ -45,21 +45,6 @@ const comparisonData = [
     feature: "Wypłaty < 24h",
     vox: true,
     others: "varies"
-  },
-  {
-    feature: "Wersja mobilna",
-    vox: true,
-    others: true
-  },
-  {
-    feature: "Kasyno na żywo",
-    vox: true,
-    others: true
-  },
-  {
-    feature: "Program VIP",
-    vox: true,
-    others: "varies"
   }
 ]
 
@@ -98,9 +83,6 @@ export function Comparison() {
             </div>
             <div className="p-3 sm:p-4 md:p-6 text-center border-l border-border bg-primary/5">
               <div className="flex items-center justify-center gap-1 sm:gap-2">
-                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-primary rounded-md sm:rounded-lg flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-xs sm:text-sm">V</span>
-                </div>
                 <span className="text-xs sm:text-sm font-bold text-primary hidden sm:inline">VOX Casino</span>
                 <span className="text-xs font-bold text-primary sm:hidden">VOX</span>
               </div>

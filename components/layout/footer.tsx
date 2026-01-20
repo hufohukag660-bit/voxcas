@@ -6,49 +6,6 @@ export function Footer() {
 
   return (
     <footer className="bg-[#12141f] border-t border-border">
-      {/* Trust Badges */}
-      <div className="border-b border-border">
-        <div className="container mx-auto px-4 py-6 sm:py-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            <div className="flex items-center gap-2 sm:gap-3">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
-                <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-accent" />
-              </div>
-              <div className="min-w-0">
-                <p className="font-semibold text-foreground text-sm sm:text-base truncate">Bezpieczna Gra</p>
-                <p className="text-xs sm:text-sm text-muted-foreground truncate">Szyfrowanie SSL</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-2 sm:gap-3">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-              </div>
-              <div className="min-w-0">
-                <p className="font-semibold text-foreground text-sm sm:text-base truncate">Szybkie Wypłaty</p>
-                <p className="text-xs sm:text-sm text-muted-foreground truncate">Do 24 godzin</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-2 sm:gap-3">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-chart-3/10 flex items-center justify-center shrink-0">
-                <CreditCard className="w-5 h-5 sm:w-6 sm:h-6 text-chart-3" />
-              </div>
-              <div className="min-w-0">
-                <p className="font-semibold text-foreground text-sm sm:text-base truncate">Wiele Metod</p>
-                <p className="text-xs sm:text-sm text-muted-foreground truncate">BLIK, karty, e-portfele</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-2 sm:gap-3">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-chart-4/10 flex items-center justify-center shrink-0">
-                <Headphones className="w-5 h-5 sm:w-6 sm:h-6 text-chart-4" />
-              </div>
-              <div className="min-w-0">
-                <p className="font-semibold text-foreground text-sm sm:text-base truncate">Wsparcie 24/7</p>
-                <p className="text-xs sm:text-sm text-muted-foreground truncate">Czat na żywo</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-8 sm:py-12">
@@ -56,9 +13,6 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-3 sm:mb-4">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-base sm:text-lg">V</span>
-              </div>
               <div className="flex flex-col">
                 <span className="text-lg sm:text-xl font-bold text-foreground">VOX</span>
                 <span className="text-xs text-muted-foreground -mt-1">CASINO</span>

@@ -1,5 +1,6 @@
 import { Gift, Repeat, Crown, Trophy, Sparkles, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 const bonuses = [
   {
@@ -46,10 +47,6 @@ export function Bonuses() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2 mb-4">
-            <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-sm font-medium text-accent">Promocje</span>
-          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             VOX Casino{" "}
             <span className="text-gradient">Bonus i Promocje</span>
@@ -136,7 +133,7 @@ export function Bonuses() {
         </div>
 
         {/* Important Notice */}
-        <div className="bg-secondary/30 border border-border rounded-2xl p-6 md:p-8">
+        {/* <div className="bg-secondary/30 border border-border rounded-2xl p-6 md:p-8">
           <h3 className="text-lg font-semibold text-foreground mb-4">
             Ważne informacje o bonusach
           </h3>
@@ -163,15 +160,17 @@ export function Bonuses() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* CTA */}
-        <div className="text-center mt-12">
-          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 glow-primary">
-            <Gift className="w-5 h-5 mr-2" />
-            Odbierz Bonus Powitalny
-          </Button>
-        </div>
+<div className="text-center mt-12">
+  <Link href="/play" passHref>
+    <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 glow-primary">
+      <Gift className="w-5 h-5 mr-2" />
+      Odbierz Bonus Powitalny
+    </Button>
+  </Link>
+</div>
       </div>
     </section>
   )

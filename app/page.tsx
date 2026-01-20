@@ -4,7 +4,7 @@ import { Hero } from "@/components/sections/hero"
 import { About } from "@/components/sections/about"
 import { Statistics } from "@/components/sections/statistics"
 import { FeaturesShowcase } from "@/components/sections/features-showcase"
-import { Games } from "@/components/sections/games"
+import { FeaturedSlots } from "@/components/sections/games"
 import { Tutorial } from "@/components/sections/tutorial"
 import { Bonuses } from "@/components/sections/bonuses"
 import { Benefits } from "@/components/sections/benefits"
@@ -26,18 +26,17 @@ export default function Home() {
         <About />
         <Statistics />
         <FeaturesShowcase />
-        <Games />
-        <Providers />
+        <FeaturedSlots />
+        {/* <Providers /> */}
         <Tutorial />
         <Bonuses />
         <Benefits />
         <Payments />
         <Security />
         <Mobile />
-        <Support />
+        {/* <Support /> */}
         <Comparison />
         <FAQ />
-        <CTA />
       </main>
       <Footer />
     </div>

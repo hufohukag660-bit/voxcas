@@ -47,10 +47,6 @@ export function FAQ() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-chart-3/10 border border-chart-3/30 rounded-full px-4 py-2 mb-4">
-            <HelpCircle className="w-4 h-4 text-chart-3" />
-            <span className="text-sm font-medium text-chart-3">FAQ</span>
-          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Najczęściej Zadawane{" "}
             <span className="text-gradient">Pytania</span>
